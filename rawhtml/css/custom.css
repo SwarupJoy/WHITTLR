@@ -1,0 +1,357 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size-adjust:none;
+		-moz-font-size-adjust:none;
+			-webkit-font-size-adjust:none;
+				-ms-font-size-adjust:none;
+					-o-font-size-adjust:none;
+	box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+}
+*:after, *:before {
+	box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+}
+ul, ol, li {
+	list-style-type: none;
+	margin: 0;
+}
+a {
+	color:#000;
+	transition: all 0.4s ease-in-out 0s;
+		-moz-transition: all 0.4s ease-in-out 0s;
+			-webkit-transition: all 0.4s ease-in-out 0s;
+}
+a:hover{
+	color:#74cbc5;
+}
+img {
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	border: none;
+}
+input[placeholder], [placeholder], *[placeholder] {
+   color: #acacac !important;
+   opacity: 1 !important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #acacac !important;
+    opacity: 1 !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #acacac !important;
+    opacity: 1 !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #acacac !important;
+    opacity: 1 !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #acacac !important;
+    opacity: 1 !important;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+    font-family: 'helvetica_ceregular';
+    src: url('../fonts/helvetica_ce_regular_4-webfont.eot');
+    src: url('../fonts/helvetica_ce_regular_4-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica_ce_regular_4-webfont.woff') format('woff'),
+         url('../fonts/helvetica_ce_regular_4-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica_ce_regular_4-webfont.svg#helvetica_ceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/******add css 28-1-16*****/
+
+.whittlr_panel{
+	width:290px;
+	border:1px solid #d3d3d3;
+	border-radius:5px;
+	padding:10px 0;
+	text-align:center;
+	margin:12px 0 0 15px;
+}
+.sign_out_area{
+	text-align:center;
+	padding:12px 0;
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+	margin:12px 0;
+	position:relative;
+}
+.sign_out_area span{
+	display:block;
+}
+.signout{
+	position:absolute;
+	right:10px;
+	top:50%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+}
+.signout a{
+	font-size:12px;
+	color:#f15943;
+}
+.signout a:hover{
+	color:#23c0f1;
+}
+.purchase{
+	margin:13px 10px;
+}
+.purchase a{
+	display:block;
+	padding:8px 10px;
+	font-size:17px;
+	color:#ffffff;
+	background:#f15e46;
+	border-radius:5px;
+}
+.purchase a:hover{
+	background:#e53316;
+}
+.found_box{
+	border-top:1px solid #dadada;
+	padding:12px 10px 35px;
+}
+.coupons_area{
+	border:1px solid #dadada;
+	margin:0 0 12px;
+}
+.coupons_cell{
+	border-bottom:1px solid #dadada;
+	padding:10px;
+	text-align:center;
+	font-size:19px;
+	color:#555555;
+}
+.coupons_cell img{
+	margin-right:12px;
+}
+.coupons_cell:last-child{
+	border-bottom:none;
+}
+.try a{
+	display:block;
+	padding:8px 10px;
+	font-size:17px;
+	color:#f15e46;
+	border:1px solid #f15e46;
+	border-radius:5px;
+}
+.try a:hover{
+	background:#e53316;
+	color:#fff;
+}
+.per_cell a{
+	border-top:1px solid #dadada;
+	padding:15px;
+	font-size:13px;
+	color:#555555;
+	display:block;
+}
+.per_cell a:hover{
+	color:#000;
+}
+.footer{
+	padding:15px 0 0;
+	border-top:1px solid #dadada;
+}
+.social_icon a{
+	font-size:28px;
+	margin:0 10px;
+	display:inline-block;
+	color:#f15943;
+}
+.social_icon a:hover{
+	color:#26aea4;
+}
+.footer p{
+	margin:12px 0 0;
+	font-size:10px;
+	color:#555555;
+}
+/*****login page css*****/
+
+.sign_out_area a{
+	display:inline-block;
+	font-size:12px;
+	color:#555555;
+	text-decoration:underline;
+}
+.sign_out_area a:hover{
+	text-decoration:none;
+}
+.sign_out_area span{
+	display:inline-block;
+}
+.login_area{
+	padding:10px 0 45px;
+}
+.login_head{
+	padding:0 20px 25px;
+	font-size:19px;
+	color:#555555;
+	text-align:left;
+}
+.login_head > span{
+	float:right;
+}
+.socila_btn a{
+	display:block;
+	margin: 0 0 10px;
+}
+.socila_btn a:hover{
+	opacity:0.9;
+}
+.frm_area{
+	border-top:1px solid #d8d8d8;
+	padding:10px 20px 0;
+	margin:20px 0 0;
+	text-align:left;
+}
+.frm_area label{
+	font-size:15px;
+	color:#555555;
+	margin:0;
+}
+.name_fld{
+	border:1px solid #d1d1d1;
+	border-radius:3px;
+	padding:5px 15px;
+	margin:8px 0 15px;
+	width:100%;
+	height:35px;
+}
+.name_fld:focus{
+	box-shadow:0px 0px 2px #f8b3a8;
+	border-color:#f8b3a8;
+}
+input:-webkit-autofill{
+	background:#000;
+}
+
+
+
+/*check box*/
+
+/*--Check-box--*/
+.check_inline .check_outer {
+	display: inline-block;
+	vertical-align: middle;
+	width: 14%;
+}
+.check_outer {
+	margin-bottom: 12px;
+	line-height: 16px;
+}
+.check_outer > div {
+	display: inline-block;
+	vertical-align: top;
+}
+.check_lbl {
+	margin-left: 8px;
+	color: #9c9c9c;
+	font-size: 13px;
+}
+
+/*--check box important--*/
+.checkbox{
+	margin:0 0 15px;
+}
+
+input[type=radio], input[type=checkbox] {
+    display:none;
+}
+input[type=checkbox] + label:before {
+    content: "";  
+    display: inline-block;  
+    width:23px;  
+    height:23px;  
+    vertical-align:middle;
+    margin-right:10px;
+	border:1px solid #d4d4d4;
+    border-radius:25px;
+	
+}
+input[type=checkbox]:checked + label:before {
+    content:"";
+	background:url(../images/tick_pic.png) center center no-repeat;
+    color:white;
+    text-align:center;
+    line-height:15px;
+    text-shadow:0px 0px 3px #eee;
+	margin-right:10px;
+}
+
+/*/////*/
+
+.paswrd_area{
+	margin:12px 0 0;
+	display:block;
+	text-align:center;
+	font-size:10px;
+	color:#f15943;
+}
+.paswrd_area span{
+	display:inline-block;
+}
+.paswrd_area a{
+	font-size:10px;
+	color:#f15943;
+	text-decoration:underline;
+}
+.paswrd_area a:hover{
+	text-decoration:none;
+	color:#000;
+}
+.power{
+	position:absolute;
+	right:10px;
+	top:50%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+}
+.sml_txt{
+	font-size:15px;
+	color:#555555;
+	margin:7px 0 0;
+}
+.my_account{
+	margin:0;
+}
+.state{
+	width:50%;
+	float:left;
+	padding-right:10px;
+}
+.zip{
+	width:50%;
+	float:right;
+}
+
+
+
+
+
+
+
+
+
+
