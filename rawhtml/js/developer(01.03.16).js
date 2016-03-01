@@ -116,37 +116,30 @@ $(document).ready(function () {
     $(".registerUser").click(function (e) {
         var existemail = 0;
         if ($.trim($("#fname").val()) == "") {
-            $('#fname_error').html('Please Enter First Name');
             $("#fname").css({"border": "1px solid #8A0808"});
             $("#fname").focus();
             return false;
         }
         else {
-            $('#fname_error').html('');
             $("#fname").removeAttr("style");
         }
         if ($.trim($("#lname").val()) == "") {
-            $('#lname_error').html('Please Enter Last Name');
             $("#lname").css({"border": "1px solid #8A0808"});
             $("#lname").focus();
             return false;
         }
         else {
-            $('#lname_error').html('');
             $("#lname").removeAttr("style");
         }
         if ($.trim($("#email").val()) == "") {
-            $('#email_error').html('Please Enter Email');
             $("#email").css({"border": "1px solid #8A0808"});
             $("#email").focus();
             return false;
         }
         else {
-            $('#email_error').html('');
             $("#email").removeAttr("style");
         }
         if (!emailValid($("#email").val())) {
-            $('#email_error').html('Please Enter Valid Email');
             $("#email").css({"border": "1px solid #8A0808"});
             $("#email").focus();
             return false;
@@ -164,82 +157,26 @@ $(document).ready(function () {
                     //alert(response);
                     if (response == 1) {
                         //alert('if');
-                        //alert("Email address already exist, try with another email address");
-                        $('#email_error').html('Email address already exist, try with another email address');
+                        alert("Email address already exist, try with another email address");
                         $("#email").css({"border": "1px solid #8A0808"});
                         $("#email").focus();
                         existemail = 1;
                         return false;
                     }
                     else {
-                        $('#email_error').html('');
                         $("#email").removeAttr("style");
                         existemail = 0;
                         if (existemail == 1) {
                             return false;
                         }
                         if (existemail == 0) {
-                            //if ($.trim($("#password").val()) == "") {
-                            //    $('#password_error').html('Please Enter Password');
-                            //    $("#password").css({"border": "1px solid #8A0808"});
-                            //    $("#password").focus();
-                            //    return false;
-                            //}
-                            //else {
-                            //    $("#password").removeAttr("style");
-                            //}
-                            if($.trim($('#password').val())=='' || $.trim($('#password').val())==0)
-                            {
-                                $('#password_error').html('Please Enter Password');
-                                //$('#first_name').css('border-color','red');
-                                $('#password').focus();
+                            if ($.trim($("#password").val()) == "") {
+                                $("#password").css({"border": "1px solid #8A0808"});
+                                $("#password").focus();
                                 return false;
                             }
                             else {
-                                $('#password_error').html('');
                                 $("#password").removeAttr("style");
-                            }
-                            //if(/^[A-Z0-9- ]*$/.test(document.getElementById('password').value) == true){
-                            //    $('#password_error').html('Letters, Numbers, and a Special Character(_) are required.');
-                            //    //$('#first_name').css('border-color','red');
-                            //    $('#password').focus();
-                            //    return false;
-                            //}
-                            //else {
-                            //    $('#password_error').html('');
-                            //    $("#password").removeAttr("style");
-                            //}
-                            if($.trim($('#password').val().length)<7)
-                            {
-                                $('#password_error').html('Password must be 7 digits');
-                                //$('#first_name').css('border-color','red');
-                                $('#password').focus();
-                                return false;
-                            }
-                            else {
-                                $('#password_error').html('');
-                                $("#password").removeAttr("style");
-                            }
-                            if($.trim($('#confirmed_password').val())=='' || $.trim($('#confirmed_password').val())==0)
-                            {
-                                $('#confirmed_password_error').html('Please Re Enter Password');
-                                //$('#first_name').css('border-color','red');
-                                $('#confirmed_password').focus();
-                                return false;
-                            }
-                            else {
-                                $('confirmed_password_error').html('');
-                                $("#confirmed_password").removeAttr("style");
-                            }
-                            if($.trim($('#password').val()) != $.trim($('#confirmed_password').val())) {
-                                $('#confirmed_password_error').html('Confirmed Password not match with password');
-                                //$('#first_name').css('border-color','red');
-                                $('#confirmed_password').focus();
-                                return false;
-                            }
-                            else {
-                                $('#confirmed_password_error').html('');
-                                $("#confirmed_password").removeAttr("style");
                             }
                         }
                         document.getElementById("registerSignup").submit();
@@ -252,138 +189,20 @@ $(document).ready(function () {
         //alert(userLocalID);
         existemail=0;
         if ($.trim($("#fname").val()) == "") {
-            $('#fname_error').html('Please enter first name');
             $("#fname").css({"border": "1px solid #8A0808"});
             $("#fname").focus();
             return false;
         }
         else {
-            $('#fname_error').html('');
             $("#fname").removeAttr("style");
         }
         if ($.trim($("#lname").val()) == "") {
-            $('#lname_error').html('Please enter last name');
             $("#lname").css({"border": "1px solid #8A0808"});
             $("#lname").focus();
             return false;
         }
         else {
-            $('#lname_error').html('');
             $("#lname").removeAttr("style");
-        }
-        if ($.trim($("#add1").val()) == "") {
-            $('#add1_error').html('Please enter address1');
-            $("#add1").css({"border": "1px solid #8A0808"});
-            $("#add1").focus();
-            return false;
-        }
-        else {
-            $('#add1_error').html('');
-            $("#add1").removeAttr("style");
-        }
-        if ($.trim($("#city").val()) == "") {
-            $('#city_error').html('Please enter city');
-            $("#city").css({"border": "1px solid #8A0808"});
-            $("#city").focus();
-            return false;
-        }
-        else {
-            $('#city_error').html('');
-            $("#city").removeAttr("style");
-        }
-        if ($.trim($("#state").val()) == "") {
-            $('#state_error').html('Please enter state');
-            $("#state").css({"border": "1px solid #8A0808"});
-            $("#state").focus();
-            return false;
-        }
-        else {
-            $('#state_error').html('');
-            $("#state").removeAttr("style");
-        }
-        if ($.trim($("#zip").val()) == "") {
-            $('#zip_error').html('Please enter zip');
-            $("#zip").css({"border": "1px solid #8A0808"});
-            $("#zip").focus();
-            return false;
-        }
-        else {
-            $('#zip_error').html('');
-            $("#zip").removeAttr("style");
-        }
-        var zip_length=document.getElementById('zip').value;
-        if(/^[0-9- ]*$/.test(zip_length) == false) {
-            $('#zip_error').html('Zip code should be numeric');
-            //$('#first_name').css('border-color','red');
-            $('#zip').focus();
-            return false;
-        }
-        else{
-            $('#zip_error').html('');
-            $("#zip").removeAttr("style");
-        }
-       /// alert(zip_length);
-        if(zip_length != "") {
-           //// alert(zip_length.length);
-            if(zip_length.length !="5" && zip_length.length <="5")
-            {
-                //alert("1");
-                $('#zip_error').html('Zip code has to be either 5 or 9 digits');
-                $('#zip').focus();
-                return false;
-            }
-            else if (zip_length.length !="9") {
-                //alert("2");
-                if(zip_length.length=="5") {
-                    //alert("3");
-                    $('#zip_error').html('');
-                    $("#zip").removeAttr("style");
-                   /// return true;
-                }
-                else
-                {
-                    $('#zip_error').html('Zip code has to be either 5 or 9 digits');
-                    $('#zip').focus();
-                    return false;
-                }
-            }
-            else {
-                $('#zip_error').html('');
-                $("#zip").removeAttr("style");
-            }
-        }
-        if($.trim($("#contact").val()) == "") {
-            $('#contact_error').html('Please enter contact number');
-            $("#contact").css({"border": "1px solid #8A0808"});
-            $("#contact").focus();
-            return false;
-        }
-        else {
-            $('#contact_error').html('');
-            $("#contact").removeAttr("style");
-        }
-        var phn_len = document.getElementById('contact').value;
-        if(phn_len != "") {
-            if(phn_len.length<10)
-            {
-                $('#contact_error').html('Contact number should be 10 digits');
-                $('#contact').focus();
-                return false;
-            }
-            else {
-                $('#contact_error').html('');
-                $("#contact").removeAttr("style");
-            }
-        }
-        if(/^[0-9- ]*$/.test(phn_len) == false) {
-            $('#contact_error').html('Contact number should be numeric');
-            //$('#first_name').css('border-color','red');
-            $('#contact').focus();
-            return false;
-        }
-        else{
-            $('#contact_error').html('');
-            $("#contact").removeAttr("style");
         }
         //if ($.trim($("#email").val()) == "") {
         //    $("#email").css({"border": "1px solid #8A0808"});
@@ -451,36 +270,30 @@ $(document).ready(function () {
     $(".loginuser").click(function (e) {
         var has_error = 0;
         if ($.trim($("#email").val()) == "") {
-            $('#email_error').html('Please enter email');
             $("#email").css({"border": "1px solid #8A0808"});
             $("#email").focus();
             has_error++;
             return false;
         }
         else {
-            $('#email_error').html('');
             $("#email").removeAttr("style");
         }
         if (!emailValid($("#email").val())) {
-            $('#email_error').html('Please enter valid email');
             $("#email").css({"border": "1px solid #8A0808"});
             $("#email").focus();
             has_error++;
             return false;
         }
         else {
-            $('#password_error').html('');
             $("#email").removeAttr("style");
         }
         if ($.trim($("#password").val()) == "") {
-            $('#password_error').html('Please enter password');
             $("#password").css({"border": "1px solid #8A0808"});
             $("#password").focus();
             has_error++;
             return false;
         }
         else {
-            $('#password_error').html('');
             $("#password").removeAttr("style");
         }
         if (has_error == 0) {

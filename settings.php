@@ -32,30 +32,49 @@
 		<input type="hidden" name="mode" id="mode" value="Update">
 		<input type="hidden" name="userid" id="userid" value="">
 		<div class="frm_area my_account">
-			<label>First Name<span style="color:red">*</span></label>
-			<input class="name_fld" type="text" name="fname" value="" id="fname" maxlength="25" autocomplete=off>
-			<label>Last Name<span style="color:red">*</span></label>
-			<input class="name_fld" type="text" name="lname" value="" id="lname" maxlength="25" autocomplete=off>
+			<div>
+				<label>First Name<span style="color:red">*</span></label>
+				<input class="name_fld" type="text" name="fname" value="" id="fname" maxlength="25" autocomplete=off>
+				<div id="fname_error" class="error_div" style="color:red;"></div>
+			</div>
+			<div>
+				<label>Last Name<span style="color:red">*</span></label>
+				<input class="name_fld" type="text" name="lname" value="" id="lname" maxlength="25" autocomplete=off>
+				<div id="lname_error" class="error_div" style="color:red;"></div>
+			</div>
 			<!--<label>Email</label>
 			<input class="name_fld" type="text" name="email" value="" id="email" maxlength="70" autocomplete=off>-->
-			<label>Address Line1</label>
-			<input class="name_fld" type="text" name="add1" value="" id="add1" maxlength="50" autocomplete=off>
-			<label>Address Line2</label>
-			<input class="name_fld" type="text" name="add2" value="" id="add2" maxlength="50" autocomplete=off>
-			<label>City</label>
-			<input class="name_fld" type="text" name="city" value="" id="city" maxlength="50" autocomplete=off>
+			<div>
+				<label>Address Line1</label>
+				<input class="name_fld" type="text" name="add1" value="" id="add1" maxlength="50" autocomplete=off>
+				<div id="add1_error" class="error_div" style="color:red;"></div>
+			</div>
+			<div>
+				<label>Address Line2</label>
+				<input class="name_fld" type="text" name="add2" value="" id="add2" maxlength="50" autocomplete=off>
+			</div>
+			<div>
+				<label>City</label>
+				<input class="name_fld" type="text" name="city" value="" id="city" maxlength="50" autocomplete=off>
+				<div id="city_error" class="error_div" style="color:red;"></div>
+			</div>
 			<div class="state_fld clearfix">
 				<div class="state">
 					<label>State</label>
 					<input class="name_fld" type="text" name="state" value="" id="state" maxlength="50" autocomplete=off>
+					<div id="state_error" class="error_div" style="color:red;"></div>
 				</div>
 				<div class="zip">
 					<label>Zip Code</label>
-					<input class="name_fld" type="text" name="zip" value="" id="zip" maxlength="50" autocomplete=off>
+					<input class="name_fld" type="text" name="zip" value="" id="zip" maxlength="10" autocomplete=off>
+					<div id="zip_error" class="error_div" style="color:red;"></div>
 				</div>
 			</div>
-			<label>Phone Number</label>
-			<input class="name_fld" type="text" name="contact" value="" id="contact" maxlength="50" autocomplete=off>
+			<div>
+				<label>Phone Number</label>
+				<input class="name_fld" type="text" name="contact" value="" id="contact" maxlength="10" autocomplete=off>
+				<div id="contact_error" class="error_div" style="color:red;"></div>
+			</div>
 			<div class="try text-center">
 				<a href="javascript:void(0)" class="update_userdetalis">Update</a>
 			</div>

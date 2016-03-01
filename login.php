@@ -18,10 +18,18 @@ if($_REQUEST["mode"]=="user_login")
         <div class="frm_area">
             <form action="" name="userlogin" id="userlogin" method="post">
                 <input type="hidden" name="mode" id="mode" value="social_login">
-                <label>Email</label>
-                <input name="email" id="email" class="name_fld" value="<?php echo $_COOKIE["cookie_email"];?>" type="text">
-                <label>Password</label>
-                <input name="password" id="password" class="name_fld" value="<?php echo $_COOKIE["cookie_password"];?>" type="password">
+                <div>
+                    <label>Email</label>
+                    <input name="email" id="email" class="name_fld" value="<?php echo $_COOKIE["cookie_email"];?>" type="text">
+                    <div id="email_error" class="error_div" style="color:red;"></div>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input name="password" id="password" class="name_fld" value="<?php echo $_COOKIE["cookie_password"];?>" type="password">
+                    <div id="password_error" class="error_div" style="color:red;"></div>
+                </div>
+                
+                
                 <div class="checkbox">
                     <input type="checkbox" id="cb1" name="cb" value="1"<?php if($_COOKIE["cookie_value"] == 1){echo "checked";}else{echo "";}?>>
                     <label for="cb1">Remember me</label><br>

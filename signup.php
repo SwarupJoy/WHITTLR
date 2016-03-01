@@ -26,14 +26,32 @@ include("ini/before_login.php");
     <div class="frm_area">
         <form action="" name="registerSignup" id="registerSignup" method="post">
             <input type="hidden" name="mode" id="mode" value="insert_signup">
-            <label>First Name</label>
-            <input class="name_fld" type="text" name="fname" id="fname" maxlength="25" autocomplete=off>
-            <label>Last Name</label>
-            <input class="name_fld" type="text" name="lname" id="lname" maxlength="25" autocomplete=off>
-            <label>Email</label>
-            <input class="name_fld" type="email" name="email" id="email" maxlength="50" autocomplete=off>
-            <label>Password</label>
-            <input class="name_fld" type="password" name="password" id="password" maxlength="20" autocomplete=off>
+		  <div>
+			 <label>First Name</label>
+			 <input class="name_fld" type="text" name="fname" id="fname" maxlength="25" autocomplete=off>
+			 <div id="fname_error" class="error_div" style="color:red;"></div>
+		  </div>
+		  <div>
+			 <label>Last Name</label>
+			 <input class="name_fld" type="text" name="lname" id="lname" maxlength="25" autocomplete=off>
+			 <div id="lname_error" class="error_div" style="color:red;"></div>
+		  </div>
+		  <div>
+			 <label>Email</label>
+			 <input class="name_fld" type="email" name="email" id="email" maxlength="50" autocomplete=off>
+			 <div id="email_error" class="error_div" style="color:red;"></div>
+		  </div>
+		  <div>
+			 <label>Password</label>
+			 <input class="name_fld" type="password" name="password" id="password"  maxlength="20" autocomplete=off>
+			 <div id="password_error" class="error_div" style="color:red;"></div>
+		  </div>
+		  <div>
+			 <label>Re-Enter Password</label>
+			 <input class="name_fld" type="password" name="confirmed_password" id="confirmed_password"  maxlength="20" autocomplete=off>
+			 <div id="confirmed_password_error" class="error_div" style="color:red;"></div>
+		  </div>
+		  <div>
             <!--<div class="checkbox">
                 <input type="checkbox" id="check" name="check" value="1">
                 <label for="check">Remember me</label><br>
